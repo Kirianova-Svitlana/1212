@@ -1,0 +1,245 @@
+<html>
+  <head>
+    <title>Donats bakery</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="donats bacery">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Allura|PT+Sans|Paytone+One" rel="stylesheet">
+    <!--jQury-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/script_donuts.js"></script>
+    <!--jQury-->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+    <link href="css/donats.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+
+    <div class="wrapper">
+
+    <header>
+      <!--menu-->
+      <nav class="navbar-fixed-top">
+      <div class = "conteiner menu">
+        <div class = "row">
+          <div class = "col-md-12 nav">
+            <div id="mySidenav" class="sidenav">
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+              <a href="#" class="active">About us</a>
+              <a href="#">Services</a>
+              <a href="#">Products</a>
+              <a href="#">Offers</a>
+              <a href="#">Contact</a>
+            </div>
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+             Maria's
+          </div><!--col-md-12 nav-->
+        </div><!--row-->
+      </div><!--conteiner menu-->
+      </nav>
+    
+      <!--Slideshow-->
+      <div class="conteiner slideshow">
+        <div class="row">
+          <div class="col-md-12">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+              
+              <!-- Indicators -->
+              <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="1" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+                <li data-target="#myCarousel" data-slide-to="3"></li>
+              </ol>
+
+              <!-- Wrapper for slides -->
+              <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                  <img src="./images/swiper_3.jpg" alt="Cake">
+                  <div class="carousel-caption">
+                    <div class="brand-name">
+                      <a href="#">Maria's</a>
+                    </div>
+                    <div class="brand-slogan">
+                      <a href="#">Bakery</a>
+                    </div>
+                    <p class="slogan">We remain committed to using the best ingredients</p>
+                  </div><!--carousel-caption-->
+                </div><!--item active-->
+                <div class="item">
+                  <img src="./images/swiper_2.jpg" alt="Cake">
+                  <div class="carousel-caption">
+                    <div class="brand-name">
+                      <a href="#">Maria's</a>
+                    </div>
+                    <div class="brand-slogan">
+                      <a href="#">Bakery</a>
+                    </div>
+                    <p class="slogan">We remain committed to using the best ingredients</p>
+                  </div><!--carousel-caption-->
+                </div><!--item-->
+                <div class="item">
+                  <img src="./images/swiper_1.jpg" alt="Makarun">
+                  <div class="carousel-caption">
+                    <div class="brand-name">
+                      <a href="#">Maria's</a>
+                    </div>
+                    <div class="brand-slogan">
+                      <a href="#">Bakery</a>
+                    </div>
+                    <p class="slogan">We remain committed to using the best ingredients</p>
+                  </div><!--carousel-caption-->
+                </div><!--item-->
+              </div><!--end-carousel-inner-->
+            </div><!--end myCarousel-->
+          </div><!--col-md-12-->
+        </div><!--row-->
+      </div> <!--end slideshow-->
+    </header>
+
+    <main class="page-content">
+      <div class="conteiner best">
+        <div class="row">
+          <div class="col-md-6 chief">
+            <img src="./images/page01_img-01.jpg">
+          </div><!--col-md-6-->
+          <div class="col-md-6 best-txt">
+            <h1>We are <br>the best!</h1>
+            <p>We exclusively use sun ripened whole grains to provide you with a source of power, stamina and health! Spoil yourself with our breads natural flavor! We use only the finest quality ingredients providing your body with important fiber and nutrients. For people who suffer from allergies we offer a delicious range of wheat and yeast free products.</p>
+            <a href="#" class="btn btn-md btn-default">read more</a>
+          </div><!--col-md-6-->
+        </div><!--row-->
+      </div><!--end best-->
+      <div class="conteiner order">
+        <div class="row">
+          <div class="col-md-12">
+            <h3>order your custom <br> cookies</h3>
+            <button class="btn btn-lg btn-default-var-2 ">order now</button> 
+            
+            <div id="form">
+              <div id="frame">
+                <form name="orderform" action="donuts .php" method="POST">
+                  <div class="conteiner">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <label for "user_name">Ім'я замовника</label>
+                      </div>
+                      <div class="col-md-6">
+                        <input type="text" placeholder="Введіть ваше ім'я" id="user_name"  value="" onchange="placeOrder()">
+                      </div>
+                    </div>
+                  </div><br>
+                  <!--Кількість печива-->
+                  <div class="conteiner field">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <label for "cakedonuts">Кількість замовленого печива</label>
+                      </div>
+                      <div class="col-md-6">
+                        <input type="text" id="cakedonuts" name="cakedonuts" value="" onchange="updateOrder()" />
+                      </div>
+                    </div>
+                  </div>
+                  <br>
+                  <!--Печиво з поливкою-->
+                  <div class="conteiner field">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <label for "glazeddonuts">Кількість замовленого печива з поливкою</label>
+                      </div>
+                      <div class="col-md-6">
+                        <input type="text" id="glazeddonuts" name="glazeddonuts" value=""  onchange="updateOrder();" />
+                      </div>
+                    </div>
+                  </div><br>
+                  <!--Minutes till pickup-->
+                  <div class="conteiner minute">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <label for "minute">Minutes till pickup</label>;
+                      </div>
+                      <div class="col-md-6">
+                        <input type="number" id="minute" name="minute"/>
+                      </div>
+                    </div>
+                  </div><br
+                  <!--Subtotal-->
+                  <div class="conteiner subtotal">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <label for "subtotal">Subtotal</label>
+                      </div>
+                      <div class="col-md-6">
+                        <input type="text" id="subtotal" name="subtotal" value=""/>
+                      </div>
+                    </div>
+                  </div><br>
+                  <!--Tax-->
+                  <div class="conteiner tax">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <label for "tax">Tax</label>
+                      </div>
+                      <div class="col-md-6">
+                        <input type="text" id="tax" name="tax" value=""/>
+                      </div>
+                    </div>
+                  </div><br>
+                  <!--Total-->
+                  <div class="conteiner total">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <label for "total">Subtotal</label>
+                      </div>
+                      <div class="col-md-6">
+                        <input type="text" id="total" name="total" value=""/>
+                      </div>
+                    </div>
+                  </div><br>
+                  <button type="button" class="btn btn-default place_order" onclick="updateOrder();">Place Order</button>
+
+                  
+                </form>
+              </div><!--frame-->
+
+            </div><!--end form-->
+          </div><!--col-md-12-->
+        </div><!--row-->
+      </div><!--conteiner order-->
+      <div class="conteiner bread">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="post">
+              <span class="restaurant-icon-1 ">
+              </span>
+              <h4 class="text-uppercase">maria’s bakery 
+                <br class="hidden visible-lg-block">is dedicated to producing
+                <br class="hidden visible-lg-block">handmade breads using
+                <br class="hidden visible-lg-block">traditional baking
+                <br class="hidden visible-lg-block">techniques
+              </h4>
+            </div>
+          </div><!--col-md-6-->
+          <div class="col-md-6">
+            <div class="post">
+              <span class="restaurant-icon-2">
+              </span>
+              <h4 class="text-uppercase">Delicious Diabetic Bakery
+- cakes and Desserts with
+natural and alternative
+sweeteners with no
+carbohydrates</h4>
+            </div>
+          </div><!--col-md-6-->
+        </div><!--row-->
+      </div><!--conteiner-->
+
+    </main>
+
+
+    </div> <!--wrapper-->
+  </body>
+</html>

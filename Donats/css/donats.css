@@ -1,0 +1,387 @@
+/* Використані кольори
+#1cbbb4 - колір меню голубий
+#f3ce00 - hover menu yellow
+*/
+
+*{
+ /*border: 1px solid;*/
+}
+
+body{
+  background-color: white;
+  color: #243238;
+  font-family: "PT Sans",sans-serif;
+  font-size: 13px;
+  line-height: 16px;
+  margin: 0;
+  min-width: 320px;
+  overflow: scroll;
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper {
+  position: relative;
+  padding: 0;
+  max-width: 100%;
+  min-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*-----menu navigation-------------------------------
+---------------------------------------------*/
+.menu{
+  background-color: #1cbbb4;
+  height: 8%;
+  color: black;
+  font-size: 33px;
+  line-height: 30px; 
+  font-family: "Allura",cursive;
+  vertical-align: middle;
+  text-align: left;
+  padding:1% 2%;
+  z-index: 5;
+}
+
+.sidenav {
+  display: none;
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #1cbbb4;
+  overflow-x: hidden;
+  padding-top: 40px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  font-family: "PT Sans",sans-serif;
+  color: white;
+  display: block;
+  transition: 0.3s
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+  color: #f1f1f1;
+  text-decoration: none;
+  background-color: #f3ce00;
+}
+
+.sidenav .active{
+  background-color:#19a59f;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.sidenav .closebtn:hover{
+  background-color:#1cbbb4;
+  padding: 2px 2px 2px 22px
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+/*-----carousel-------------------------------
+---------------------------------------------*/
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  width: 100%;
+  margin: auto;
+  padding: 0;
+  margin: 0;
+}
+
+.row{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.col-md-12{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.carousel-indicators .active{
+  background-color:#f3ce00;
+}
+
+.carousel-indicators{
+  position: absolute;
+  top: 90%;
+}
+
+.carousel-indicators li{
+  background-color: white;
+}
+
+.carousel-caption{
+  position: absolute;
+  vertical-align: top;
+  top: 47%;
+}
+
+.carousel-caption .brand-name a{
+  font-family: "Allura",cursive;
+  color: #f3ce00;
+  font-size: 73px;
+}
+
+.carousel-caption .brand-name a:hover{
+  text-decoration: none;
+}
+
+.carousel-caption .brand-name{
+  padding-left: 12%;
+}
+
+.carousel-caption .brand-slogan a{
+  font-family: "Paytone One",sans-serif;
+  font-size: 95px;
+  line-height: 40px;
+  color: #fff;
+}
+
+.carousel-caption .brand-slogan a:hover{
+  text-decoration: none;
+}
+
+.carousel-caption {
+  text-align: center;
+}
+
+.brand-slogan{
+  padding-top: 3%;
+}
+
+.slogan{
+  font-size: 32px;
+  line-height: 1.5;
+  padding-top: 20%;
+}
+
+/*page content*/
+
+/*conteiner best*/
+.best{
+  position: relative;
+  padding-bottom: 0;
+  padding: 0;
+  margin: 0;
+  background-color: #f3ce00;
+}
+
+.chief img{
+  height: 104%; 
+  padding-left: 7%; 
+}
+
+.best h1{
+  font-size: 85px;
+  line-height:90px;
+  letter-spacing: 10px;
+  font-family: "Paytone One",sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.best-txt{
+  padding: 0;
+  padding-top: 5%;
+  padding-right: 6%;
+}
+
+.best-txt p{
+  padding-top: 10%;
+  font-size: 130%;
+  line-height:25px;
+  text-align: justify;
+  margin-bottom: 5%;
+  padding-bottom: 0;
+}
+
+.btn-default {
+  color: #fff;
+  background: transparent;
+  border-color: #fff;
+}
+
+.btn-md {
+  border-width: 1px;
+  border-color: white;
+  padding: 20px 40px;
+  font-size: 17px;
+}
+
+.btn {
+  font-family: "Paytone One",sans-serif;
+  display: inline-block;
+  text-align: center;
+  line-height: 1.2;
+  white-space: nowrap;
+  max-width: 100%;
+  border-style: solid;
+  text-transform: uppercase;
+  cursor: pointer;
+  vertical-align: middle;
+  z-index: 1;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.btn-default:hover {
+  background: #fff;
+  color: #f3ce00;
+  border-color: #fff;
+}
+
+/* conteiner order*/
+.order{
+  background:url(../images/page01_img-02.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  padding: 167px 0 145px;
+}
+
+.order h3{
+  font-size: 50px;
+  line-height: 1.3;
+  text-transform: uppercase;
+  font-family: "Paytone One",sans-serif;
+  letter-spacing: 3.5px;
+  color: white;
+  text-align: center;
+}
+
+
+.btn-default-var-2 {
+  color: #fff;
+  background: #1cbbb4;
+  border-color: #fff;
+  margin-left: 42%;
+}
+
+.btn-default-var-2:hover{
+  color: #fff;
+  background: #f3ce00;
+}
+
+.btn-lg{
+  border-width: 6px;
+  padding: 20px 40px;
+  font-size: 18px; 
+}
+
+.btn {
+  font-family: "Paytone One",sans-serif;
+  display: inline-block;
+  text-align: center;
+  line-height: 1.2;
+  white-space: nowrap;
+  max-width: 100%;
+  border-style: solid;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  cursor: pointer;
+  vertical-align: middle;
+  z-index: 1;
+  text-decoration: none;
+  letter-spacing: 1px;
+  color: white;
+  border-color: #fff;
+}
+
+#form{
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 5%;
+  width:600px;
+  height:500px;
+  display:none;
+  background-color:rgba(28,187,180,0.63);
+  font-size: 22px;
+  color: white;
+}
+
+#form input{
+  color: black;
+}
+
+#form .conteiner{
+  padding-left: 2%;
+  padding-top: 2%;
+}
+
+#form .place_order{
+  margin-left: 46%;
+  margin-top: 1%;
+}
+
+/*conteiner bread*/
+.bread{
+  background: url(../images/page01_img-03.jpg);
+  background-size: cover;
+  background-position: 65%;
+  padding: 10% 6% 15%;
+}
+
+.bread .col-md-6{
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  flex-basis: 50%;
+  max-width: 50%;
+}
+
+.post {
+  color: #fff;
+  background: rgba(29,6,0,0.63);
+  padding: 41px 15px 30px 25px;
+  font-family: "Paytone One",sans-serif;
+}
+
+.post h4 {
+  color: #fff;
+  font-size: 28px;
+  letter-spacing: 1px;
+  transition: 0.3s;
+  padding: 5% 8% 12%;
+}
+
+.post:hover h4 {
+  color: #f3ce00;
+}
+
+.post span {
+  font-size: 60px;
+  line-height: 90px;
+  margin-right: 6%;
+  margin-top: 5%;
+  text-align: right;
+  display: inherit;
+}
+
+.restaurant-icon-1:before {
+  content: url(../images/hat_icon.png);
+}
+
+.restaurant-icon-2:before {
+  content: url(../images/cupcake_icon.png);
+}
